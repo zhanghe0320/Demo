@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".services.DownloadActivity"
+    android:orientation="vertical">
+
+    <com.demo.drawable.ripple.RippleButton
+        android:id="@+id/down_start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:text="开始下载">
+    </com.demo.drawable.ripple.RippleButton>
+    <TextView
+        android:id="@+id/down_pause"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:text="暂停下载">
+    </TextView>
+    <TextView
+        android:id="@+id/down_begin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:text="继续下载">
+    </TextView>
+    <TextView
+        android:id="@+id/down_cancle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:text="取消下载">
+    </TextView>
+</LinearLayout>

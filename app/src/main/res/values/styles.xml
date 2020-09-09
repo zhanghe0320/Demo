@@ -1,0 +1,40 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorGray</item>
+        <item name="colorPrimaryDark">@color/colorGray</item>
+        <item name="colorAccent">@color/colorGray</item>
+    </style>
+
+
+
+
+    <!-- 自定义view的进度条  -->
+    <attr name="startColor" format="color" />
+    <attr name="endColor" format="color" />
+    <attr name="backgroundColor" format="color" />
+    <attr name="textColor" format="color" />
+    <declare-styleable name="GoodProgressView">
+        <attr name="startColor" />
+        <attr name="endColor" />
+        <attr name="backgroundColor" />
+        <attr name="textColor" />
+    </declare-styleable>
+
+
+
+    <!--自定义textview -->
+    <!--属性声明-->
+    <attr name="mText" format="string"></attr>
+    <attr name="mTextColor" format="color"></attr>
+    <attr name="mTextSize" format="dimension"></attr>
+    <!--属性使用-->
+    <declare-styleable name="MyTextView">
+        <attr name="mText"></attr>
+        <attr name="mTextColor"></attr>
+        <attr name="mTextSize"></attr>
+    </declare-styleable>
+
+</resources>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <com.demo.view.status.StatusBarRelativeLayout
+        android:id="@+id/statusbar"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@color/colorPrimary"
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <FrameLayout
+            android:id="@+id/framlayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Hello World!"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/statusbar"
+            app:layout_constraintTop_toTopOf="parent"></FrameLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/main_startservice"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="开启服务"
+        android:textSize="25sp"></TextView>
+
+    <TextView
+        android:id="@+id/main_stopservice"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="关闭服务"
+        android:textSize="25sp"></TextView>
+
+
+    <TextView
+        android:id="@+id/main_bindservice"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="绑定服务"
+        android:textSize="25sp"></TextView>
+
+    <TextView
+        android:id="@+id/main_ubindservice"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="解绑服务"
+        android:textSize="25sp"></TextView>
+
+    <TextView
+        android:id="@+id/main_todownservice"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="进入下载服务"
+        android:textSize="25sp"></TextView>
+    <!--自定义textview   style :  xmlns:app="http://schemas.android.com/apk/res-auto"  引用app 可以自定义 app:mText="I AM FORM CHINA" -->
+    <com.demo.view.self.MyTextView
+        android:id="@+id/mytextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#ff0000"
+
+        app:mText="I AM FORM CHINA"
+        app:mTextColor="#0000ff"
+        app:mTextSize="20sp"
+
+        android:padding="20dp">
+
+    </com.demo.view.self.MyTextView>
+
+    <com.demo.view.navigation.NavigationBarRelativeLayout
+        android:id="@+id/navigationbar"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        app:layout_constraintTop_toBottomOf="@id/text"
+        tools:ignore="MissingConstraints" />
+
+</LinearLayout>

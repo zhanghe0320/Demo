@@ -1,0 +1,42 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    apply from: 'versions.gradle'  //导入配置文件信息    配置文件的信息初始化  配置文件名称信息
+    repositories {
+        google()
+        jcenter()
+        
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.6.3'
+        classpath 'org.greenrobot:greendao-gradle-plugin:3.2.2' // add plugin   添加 plugin   项目的build.gradle 的apply 引入
+        classpath 'com.novoda:bintray-release:0.9.2'   //上传魔窟开处理
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+
+//配置文件信息  可以在此处设置
+ext {
+    minSdkVersion = 14
+    targetSdkVersion = 29
+    compileSdkVersion = 29
+    buildToolsVersion = "29.0.2"
+    versionCode = 40
+    versionName = "1.2.0"
+    appcompat_v7 = "com.android.support:appcompat-v7:28.0.0"
+    androidx_appcompat = "androidx.appcompat:appcompat:1.1.0"
+}
